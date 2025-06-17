@@ -1,0 +1,358 @@
+:root {
+    --text-color: #3a0c3f;
+    --link-color: #5b1463;
+    --background-color: #fceefa;
+    --skills-color: #d7c7d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Serif;
+    background-color: var(--background-color);
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 0 50px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fae9f8; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;   
+    }
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 15px;
+    font-size: 20px;    
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* for logo in NAV-left*/
+
+nav .left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px; /* Adjust as needed */
+}
+
+
+
+/* SECTION1: ABOUT */
+
+.About-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ffe1fc;
+  text-align: center;
+}
+
+.About-section h2 {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.headshot img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 20%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  flex: 5;
+  min-width: 250px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.text ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.text .links a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 15px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.About-section .text .links a:hover {
+    background-color: var(--link-color);
+    color: var(--background-color);
+}
+
+
+
+/*skills section*/
+.skills-section {
+    text-align: left;   
+    padding: 0 100px;                
+    margin: 10px 50px;             
+}
+  
+
+.skills-section h2 {
+    text-align: left;
+    font-size: 30px;
+}
+
+.skills-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.my-skills {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.my-skills ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+.my-skills li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.my-skills li::before {
+  content: "✔️"; /* Change this to whatever symbol or emoji you want */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+/*experience section */
+.experience-section {
+    padding: 0 20px;
+    margin: 50px 100px;
+}
+
+.experience-section{
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 40px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #3a0c3f;
+  z-index: 0;
+}
+
+.event {
+  position: relative;
+  width: 400px;
+  z-index: 1;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #3a0c3f;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  position: relative;
+  top: 10px;
+  box-shadow: 0 0 0 3px #43263d;
+}
+
+.content {
+  width: 400px;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* SECTION Contact */
+.contact-section {
+  text-align: left;
+  padding: 0 100px;                  /* inner spacing */
+  margin: 10px 50px;   
+  margin-bottom: 100px;
+}
+
+.contact-section h2 {
+  font-size: 30px;
+
+}
+
+.contact-section .group {
+  gap: 50px;
+}
+
+.contact-section .group .text {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.contact-section .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form input {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--link-color);
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  resize: none;
+  width: 500px;
+  height: 40px;
+}
+
+.contact-section .group form textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--link-color);
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  resize: none;
+  width: 500px;
+  height: 200px;
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: var(--link-color);
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  transition: .1s;
+  width: 500px;
+  height: 50px;
+}
+
+.contact-section .group form button:hover {
+  filter: brightness(.7);
+}
+
+
+@media (max-width: 850px) {
+     /*SECTION 1: ABOUT */
+    .About-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+     /*SECTION 1: ABOUT */
+    .About-section {
+        flex-direction: column-reverse;
+    }
+
+    .About-section .headshot img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 715px) {
+    /* NAV BAR */
+    nav  {
+        padding: 0 20px;
+    }
+
+    nav .right a {  
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span{
+        display: none
+    }
+}
+
+
